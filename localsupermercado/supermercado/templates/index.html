@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>productos test</h2>
+  <div class="row">
+   {% for producto in num_productos %}
+      <div class="col-md-4">
+                  <div class="card mb-2">
+                      <img class="card-img-top" src="{{ producto.imagen.url }}">
+                      <div class="card-body">
+                          <h5 class="card-title text-uppercase">{{ producto.nombreP }}</h5>
+                          
+                      </div>
+                  </div>
+              </div>{% endfor %}
+          </div>
+
+
+  </div>
+
+{% endblock %}

@@ -45,7 +45,7 @@ class Direcciones(models.Model):
 
   rut= models.ForeignKey('Cliente', null=False,on_delete=models.RESTRICT)
   id_direccion= models.UUIDField(primary_key=True, default=uuid.uuid4)
-  calle=models.CharField(max_length=50, null=False);
+  calle=models.CharField(max_length=50, null=False)
   numeroC=models.BigIntegerField(max_length=6, null=False)
   id_comuna = models.ForeignKey('Comuna',null=False,on_delete=models.RESTRICT)
   departamento = models.BigIntegerField(max_length=6)
@@ -65,7 +65,7 @@ class Producto(models.Model):
    nombreP=models.CharField(max_length=50,null=False)
    stock=models.BigIntegerField(max_length=15,null=False)
    precio=models.BigIntegerField(max_length=7,null=False)
-   imagen=models.ImageField(null=False)
+   imagen=models.ImageField(upload_to='img/',null=False)
    id_tipo=models.ForeignKey('TipoProducto',null=False,on_delete=models.RESTRICT)
 
    
