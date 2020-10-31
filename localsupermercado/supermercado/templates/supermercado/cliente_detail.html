@@ -1,0 +1,30 @@
+{%extends "base_generic.html"%}
+
+{%block content%}
+
+<div class="row justify-content-center bg-dark vh-100 col-12">
+    <div >
+        <div class="container  bg-secondary">
+            <div class="text-white col-md-12">
+                
+                <h2>¡Bienvenido {{cliente}}!, estos son tus datos.</h2>
+            </div>
+            <hr>
+            <div>
+                <p> Rut: {{cliente.rut}}</p>
+                <p> Nombre completo: {{cliente}}</p>
+                <p> Celular: +56 {{cliente.fcelular}}</p>
+                <p> Teléfono: +56 {{cliente.fcasa}}</p>
+                <p> Fecha de nacimiento: {{cliente.fecha_nacimiento}}</p>
+            </div>
+            <div class=" row  justify-content-center ">
+                <a href="{% url 'index' %}" class="btn btn-info col"> Inicio </a>
+                <a href="{% url 'cliente_update' pk=cliente.pk %}" class="btn btn-warning col" style="border: 1px whitesmoke groove"> Actualizar cuenta</a>
+                <a href="{% url 'cliente_delete' pk=cliente.pk %}" class="btn btn-danger col"> Eliminar cuenta </a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{%endblock%}

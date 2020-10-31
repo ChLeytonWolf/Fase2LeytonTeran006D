@@ -34,8 +34,8 @@
 
 <BODY>
     <header>
-        {% block top %}
-        <div class="top"> <img class="img-fluid" src="img/logo.png" height="500px" width="500px">
+  
+        <div class="top"> <img class="img-fluid" src="{% static 'img/logo.png' %}" height="500px" width="500px">
 
             <div class="iconos">
 
@@ -49,13 +49,13 @@
 
 
             </div>
-        {% endblock %}
+       
         </div>
 
         <div class="backbar">
             <nav class="navbar navbar-expand-lg navbar-dark">
 
-                <a class="btn btn-info" href="#">Inicio</a>
+                <a href="{% url 'index' %}" class="btn btn-info"> Inicio </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,11 +63,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'index' %}"> ¡OFERTAS!</a>
-                        </li>
-
+                    <ul class="navbar-nav mr-auto">                    
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Supermercado</a>
@@ -105,8 +101,6 @@
                                 <a class="dropdown-item" href="#">Hombre</a>
                                 <a class="dropdown-item" href="#">Mujer</a>
                                 <a class="dropdown-item" href="#">Niños</a>
-                                <a class="dropdown-item" href="#">Deportivos</a>
-                                <a class="dropdown-item" href="#">Unisex</a>
                             </div>
                         </li>
                     </ul>
@@ -115,52 +109,8 @@
             </nav>
         </div>
     </header>
-
-    <!-- carrousel -->
-
-    <div id="carousel1" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel1" data-slide-to="1"></li>
-            <li data-target="#carousel1" data-slide-to="2"></li>
-        </ol>
-
-        <!-- diapositivas -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block text-white bg-dark w-100 img-fluid" src="img/ofertas.png" height="500px"
-                    width="500px" alt="">
-                <div class="carousel-caption">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block text-white bg-dark w-100 img-fluid" src="img/ofertas2.png" height="500px"
-                    width="500px" alt="">
-                <div class="carousel-caption">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block text-white bg-dark w-100 img-fluid" src="img/ofertas3.png" height="500px"
-                    width="500px" alt="">
-                <div class="carousel-caption">
-                </div>
-            </div>
-        </div>
-        <!-- botones de desplazamiento a izquierda y derecha -->
-        <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel1" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
-    </div>
-
-    <div class="ofertas">
-        <h1><b>¡Ofertas solo por hoy!</b></h1>
-    </div>
-    <div>
+        
+    <div >
          {% block content %} {% endblock %}
     </div>    
 
@@ -194,7 +144,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 
-                    <a class="btn btn-primary" href="Registro.html">Registro</a>
+                    <a class="btn btn-primary" href="{% url 'cliente_create' %}">Registro</a>
                 </div>
             </div>
         </div>

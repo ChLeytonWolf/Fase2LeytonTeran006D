@@ -20,7 +20,7 @@ class Cliente(models.Model):
 
 
 	def get_absolute_url(self):
-	    return reverse('datos-cliente',arg=[str(self.rut)])
+	   return reverse('cliente-detail',args=[str(self.rut)])
 
 class Region(models.Model):
 	id_region=models.UUIDField(primary_key=True,default=uuid.uuid4)
