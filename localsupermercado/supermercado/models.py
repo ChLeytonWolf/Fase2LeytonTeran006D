@@ -10,8 +10,8 @@ class Cliente(models.Model):
 	nombres = models.CharField(max_length=50, null=False)
 	apellidoP = models.CharField(max_length=20, null=False)
 	apellidoM = models.CharField(max_length=20, null=False)
-	fcelular = models.BigIntegerField(max_length=9, null=False)
-	fcasa = models.BigIntegerField(max_length=9, null=False)
+	fcelular = models.BigIntegerField( null=False)
+	fcasa = models.BigIntegerField( null=False)
 	fecha_nacimiento= models.DateField(null=False)
 
 
@@ -46,9 +46,9 @@ class Direcciones(models.Model):
   rut= models.ForeignKey('Cliente', null=False,on_delete=models.RESTRICT)
   id_direccion= models.UUIDField(primary_key=True, default=uuid.uuid4)
   calle=models.CharField(max_length=50, null=False)
-  numeroC=models.BigIntegerField(max_length=6, null=False)
+  numeroC=models.BigIntegerField( null=False)
   id_comuna = models.ForeignKey('Comuna',null=False,on_delete=models.RESTRICT)
-  departamento = models.BigIntegerField(max_length=6)
+  departamento = models.BigIntegerField()
 
 class TipoProducto(models.Model):
 
@@ -63,8 +63,8 @@ class TipoProducto(models.Model):
 class Producto(models.Model):
    id_producto=models.UUIDField(primary_key=True,default=uuid.uuid4)
    nombreP=models.CharField(max_length=50,null=False)
-   stock=models.BigIntegerField(max_length=15,null=False)
-   precio=models.BigIntegerField(max_length=7,null=False)
+   stock=models.BigIntegerField(null=False)
+   precio=models.BigIntegerField(null=False)
    imagen=models.ImageField(upload_to='img/',null=False)
    id_tipo=models.ForeignKey('TipoProducto',null=False,on_delete=models.RESTRICT)
 
