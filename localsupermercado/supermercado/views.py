@@ -17,6 +17,8 @@ def index(request):
 
 		)
 
+
+
 class ClienteCreate(CreateView):
     model = Cliente
     fields = '__all__'
@@ -32,3 +34,9 @@ class ClienteDelete(DeleteView):
 
 class ClienteDetailView(generic.DetailView):
     model = Cliente
+
+
+class ClienteListView(generic.ListView):
+    model = Cliente
+    paginate_by = 20
+

@@ -138,13 +138,15 @@
                             <input name="password" id="password" type="password" class="form-control"
                                 placeholder="Password" minlength="5" required>
                         </div>
-                        <button class="btn btn-primary">Login</button>
+                        <button class="btn btn-primary" >Login</button>
                     </div>
                 </form>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 
                     <a class="btn btn-primary" href="{% url 'cliente_create' %}">Registro</a>
+                    <a class="btn btn-primary" href="">boletas</a>
+                    <a class="btn btn-primary" href="{% url 'clientes' %}">Lista de clientes</a>
                 </div>
             </div>
         </div>
