@@ -16,7 +16,11 @@ def index(request):
         context={'num_productos':num_productos},
 
 		)
-
+def boletas(request):
+    return render(
+        request,
+        'boletas.html'
+        )  
 
 
 class ClienteCreate(CreateView):
@@ -25,7 +29,7 @@ class ClienteCreate(CreateView):
 
 class ClienteUpdate(UpdateView):
     model = Cliente
-    fields = ['rut','nombres','apellidoP', 'apellidoM', 'fcelular', 'fcasa', 'fecha_nacimiento']
+    fields = ['nombres','apellidoP', 'apellidoM', 'fcelular', 'fcasa','email']
     template_name_suffix = '_update_form'
 
 class ClienteDelete(DeleteView):

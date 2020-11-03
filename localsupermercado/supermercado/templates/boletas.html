@@ -1,0 +1,110 @@
+{% extends "base_generic.html" %}
+{%block content%}
+
+
+{% load static %}
+{% block javascript %}
+<script>
+
+$(document).ready(function(){
+    
+    $("#detalles").click(function(){
+            
+                $("#detalle").prop("hidden", false);
+        
+            
+        });
+    $("#detalles1").click(function(){
+            
+                $("#detalle").prop("hidden", false);
+        
+            
+        });
+    $("#detalles2").click(function(){
+            
+                $("#detalle").prop("hidden", false);
+        
+            
+        });
+    $("#detalles3").click(function(){
+            
+                $("#detalle").prop("hidden", false);
+        
+            
+        });
+    $("#cerrar").click(function(){
+            
+                $("#detalle").prop("hidden", true);
+        
+            
+        });
+    });
+
+
+</script>
+{% endblock %}
+
+    <div class="form-row justify-content-center col-12 bg-dark vh-100">
+        <div class="bg-secondary">  
+          <div class="col-md-12 text-white ">
+            <div class="container mb-2 " >
+              <label>fecha compra</label>
+              <input type="text" name="fecha1" id="fecha1" minlength="2" value="05/19/2020" disabled>
+              <label>total</label>
+              <input type="text" name="total1" id="total1" minlength="3" value="$21.000" disabled>
+              <button id="detalles" class="btn btn-primary  btnn">Detalle 1</button>
+            </div>
+            <div class="container mb-2">
+              <label>fecha compra</label>
+              <input type="text" name="fecha2" id="fecha2" minlength="2" value="07/19/2020" disabled>
+              <label>total</label>
+              <input type="text" name="total1" id="total1" minlength="3" value="$28.000" disabled>
+              <button id="detalles1" class="btn btn-primary  btnn">Detalle</button>
+            </div>
+
+            <div class="container mb-2">
+              <label>fecha compra</label>
+              <input type="text" name="fecha3" id="fecha3" minlength="2" value="10/19/2020" disabled>
+              <label>total</label>
+              <input type="text" name="total1" id="total1" minlength="3" value="$30.000" disabled>
+              <button id="detalles2" class="btn btn-primary  btnn">Detalle</button>
+            </div>
+            
+            
+          </div>
+        </div>
+        <div id="detalle" class="bg-success" hidden>
+            <div class="text-white col-md-12 ">
+            <div>
+              
+            <label>producto 1</label>
+            <input type="text" name="fecha1" id="fecha1" minlength="2" value="leche milo" disabled>
+            <label>valor</label>
+            <input type="text" name="total1" id="total1" minlength="3" value="$2000" disabled>
+    
+            <label>producto 1</label>
+            <input type="text" name="fecha1" id="fecha1" minlength="2" value="palta hass" disabled>
+            <label>valor</label>
+            <input type="text" name="total1" id="total1" minlength="3" value="$8000" disabled>
+    
+            <label>producto 1</label>
+            <input type="text" name="fecha1" id="fecha1" minlength="2" value="Lomo liso" disabled>
+            <label>valor</label>
+            <input type="text" name="total1" id="total1" minlength="3" value="$10000" disabled>
+    
+            <label>producto 1</label>
+            <input type="text" name="fecha1" id="fecha1" minlength="2" value="queso chanco" disabled>
+            <label>valor</label>
+            <input type="text" name="total1" id="total1" minlength="3" value="$3000" disabled>
+            <div class="form-group ">
+              <button id="cerrar" class="btn btn-primary  btnn">cerrar detalle</button>
+            </div> 
+          </div>    
+          
+          </div>
+         </div>
+      </div>
+   
+      
+      
+{%endblock%}

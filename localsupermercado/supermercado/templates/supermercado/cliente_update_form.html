@@ -9,7 +9,10 @@
             
                 <h1> Actualizar datos</h1>
                 <div class="container">
+                    <label>Rut:</label> <input placeholder="{{cliente.rut}}-{{cliente.dv}}" disabled="true">
                     {{ form.as_p }}
+                    <label>fecha nacimiento</label>
+                    <input placeholder="{{cliente.fecha_nacimiento}}" disabled="true">
                 </div>
                 <div class="container">
                     <input type="submit" class="btn btn-danger" value="Actualizar">

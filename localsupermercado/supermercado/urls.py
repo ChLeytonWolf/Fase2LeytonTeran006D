@@ -7,6 +7,7 @@ path('',views.index,name='index'),
 
 path('cliente/<int:pk>', views.ClienteDetailView.as_view(), name="cliente-detail"),
 path('clientes/',views.ClienteListView.as_view(),name='clientes'),
+path('boletas/', views.boletas, name='boletas'),
 ]
 
 urlpatterns+=[

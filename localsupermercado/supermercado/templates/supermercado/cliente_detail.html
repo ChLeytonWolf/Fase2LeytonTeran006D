@@ -11,11 +11,12 @@
             </div>
             <hr>
             <div>
-                <p> Rut: {{cliente.rut}}</p>
+                <p> Rut: {{cliente.rut}}-{{cliente.dv}}</p>
                 <p> Nombre completo: {{cliente}}</p>
                 <p> Celular: +56 {{cliente.fcelular}}</p>
                 <p> Teléfono: +56 {{cliente.fcasa}}</p>
                 <p> Fecha de nacimiento: {{cliente.fecha_nacimiento}}</p>
+                <p> email: {{cliente.email}}</p>
             </div>
             <div class=" row  justify-content-center ">
                 <a href="{% url 'index' %}" class="btn btn-info col"> Inicio </a>

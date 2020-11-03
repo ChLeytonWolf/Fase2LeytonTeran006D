@@ -7,12 +7,14 @@ import uuid
 class Cliente(models.Model):
 
 	rut = models.CharField(max_length=11, null=False, primary_key=True)
+	dv = models.CharField(max_length=1,null=False)
 	nombres = models.CharField(max_length=50, null=False)
 	apellidoP = models.CharField(max_length=20, null=False)
 	apellidoM = models.CharField(max_length=20, null=False)
 	fcelular = models.BigIntegerField( null=False)
 	fcasa = models.BigIntegerField( null=False)
 	fecha_nacimiento= models.DateField(null=False)
+	email= models.EmailField(max_length=50,default='compras@super.cl',unique=True)
 
 
 	def __str__(self):
